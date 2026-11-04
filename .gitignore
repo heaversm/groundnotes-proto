@@ -1,0 +1,14 @@
+# Working notes, kept local.
+PLAN.md
+
+node_modules/
+.netlify/
+.DS_Store
+
+# Secrets never go in the repo. The API key lives in the shell or in Netlify's environment settings.
+.env
+.env.*
+!.env.example
+
+# Article snapshots pulled while writing seeds: other people's copyrighted text.
+tools/cache/

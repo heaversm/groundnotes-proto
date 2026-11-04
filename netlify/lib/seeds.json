@@ -1,0 +1,275 @@
+[
+  {
+    "url": "https://medicalxpress.com/news/2026-10-energy-products-linked-cardiac-heart.html",
+    "readers": [
+      {
+        "handle": "quiet heron",
+        "highlights": [
+          {
+            "quote": "some pre-workout supplements contain more than 12 times as much caffeine per fluid ounce",
+            "tag": "remember",
+            "note": "Twelve times coffee, per ounce. I take pre-workout three times a week and have never once checked the label."
+          },
+          {
+            "quote": "these products do not go through the same premarket safety testing required for medications",
+            "tag": "question",
+            "note": "Why does a drink with this much stimulant count as food? Who decided that, and when?"
+          },
+          {
+            "quote": "Cardiac arrest was reported about 11 times more often",
+            "tag": "observation",
+            "note": "Big number, but it's eleven times more often in the reports, not eleven times more likely to happen to you."
+          },
+          {
+            "quote": "it is unknown how many people consumed these products without experiencing any cardiac events",
+            "tag": "observation",
+            "note": "This is the paragraph that should have been near the top."
+          }
+        ]
+      },
+      {
+        "handle": "curious otter",
+        "highlights": [
+          {
+            "quote": "Cardiac arrest was reported about 11 times more often",
+            "tag": "disagree",
+            "note": "These are voluntary reports. People report what they already suspect, so energy drinks were always going to show up."
+          },
+          {
+            "quote": "sold next to soda and bottled water, so most people assume they carry no real risk",
+            "tag": "observation",
+            "note": "Where something sits on the shelf as a signal that it's safe. Never thought of the shelf as a message."
+          },
+          {
+            "quote": "consuming them before intense exercise or mixing them with alcohol or drugs",
+            "tag": "followup",
+            "note": "I'd like to know how many of the reports involved alcohol. That might be the real story."
+          },
+          {
+            "quote": "health care professionals should remember to ask their younger patients",
+            "tag": "remember",
+            "note": "Sending this to my sister. She's an ER nurse."
+          }
+        ],
+        "reflections": [
+          {
+            "prompt": "What surprised you most in this piece?",
+            "answer": "How much of the finding rests on people choosing to file a report."
+          }
+        ],
+        "leftQuestions": [
+          "Has anyone here cut back on energy drinks, and did you notice a difference?"
+        ]
+      },
+      {
+        "handle": "sunlit fern",
+        "highlights": [
+          {
+            "quote": "Sales of caffeinated energy drinks have more than doubled over the past decade",
+            "tag": "observation",
+            "note": "Doubled in ten years. That matches every gas station fridge I walk past."
+          },
+          {
+            "quote": "consuming up to 400 mg of caffeine per day",
+            "tag": "followup",
+            "note": "Look up how much is in the cans I actually drink."
+          },
+          {
+            "quote": "sold next to soda and bottled water, so most people assume they carry no real risk",
+            "tag": "remember",
+            "note": "This is exactly me. I've never thought of them as different from a soda."
+          },
+          {
+            "quote": "the study does not prove that caffeine products cause these events",
+            "tag": "question",
+            "note": "So what would it take to prove it? A trial sounds impossible to run ethically."
+          }
+        ],
+        "reflections": [
+          {
+            "prompt": "What would you want to ask someone else who read it?",
+            "answer": "Whether they'd change anything about what they drink after reading it."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://www.abc.net.au/news/science/2026-11-03/signs-of-mineralised-molecules-from-dinosaurs-red-blood-cell/107335770",
+    "readers": [
+      {
+        "handle": "patient lantern",
+        "highlights": [
+          {
+            "quote": "actually found heme inside a fossil blood cell ever",
+            "tag": "remember",
+            "note": "115 million years and the chemistry is still in there."
+          },
+          {
+            "quote": "no-one is cloning dinosaurs anytime soon",
+            "tag": "observation",
+            "note": "Glad the writer answered the question everyone was thinking."
+          },
+          {
+            "quote": "What we found is that the bone was almost 80 per cent heme.",
+            "tag": "question",
+            "note": "Eighty percent? How is a bone mostly a blood molecule? I feel like I'm misreading this."
+          },
+          {
+            "quote": "They are currently running tests on whether they can mineralise human blood with mat samples from Shark Bay.",
+            "tag": "followup",
+            "note": "I want to see how this experiment turns out."
+          }
+        ]
+      },
+      {
+        "handle": "golden finch",
+        "highlights": [
+          {
+            "quote": "But some experts were yet to be convinced the ellipsoid shapes seen in the study were definitively blood cells.",
+            "tag": "observation",
+            "note": "Good that the sceptics get real space in the piece."
+          },
+          {
+            "quote": "This is smaller than almost all non-mammalian red blood cells, which are larger because of the retained nucleus",
+            "tag": "question",
+            "note": "Is size alone enough to rule it out? Couldn't cells shrink as they mineralise?"
+          },
+          {
+            "quote": "What we found is that the bone was almost 80 per cent heme.",
+            "tag": "disagree",
+            "note": "Hard to square with how cautious the other scientists are. I'd want to see the paper's own wording."
+          },
+          {
+            "quote": "We'll be able to completely ask new questions of these fossils that have been in museums for decades",
+            "tag": "remember",
+            "note": "Old fossils sitting in drawers turning into new evidence. Lovely idea."
+          }
+        ],
+        "reflections": [
+          {
+            "prompt": "What surprised you most in this piece?",
+            "answer": "That the experts quoted disagree so openly in the same article."
+          }
+        ],
+        "leftQuestions": [
+          "Does anyone know how scientists tell a fossil cell apart from a mineral that just looks like one?"
+        ]
+      },
+      {
+        "handle": "tidal moth",
+        "highlights": [
+          {
+            "quote": "Coastal microbes you would find at the beach may have helped preserve red blood cells",
+            "tag": "observation",
+            "note": "The beach microbes are the quiet heroes of this story."
+          },
+          {
+            "quote": "It died on microbial mats, colonies of bacteria and archaea often found in coastal locations.",
+            "tag": "followup",
+            "note": "Read up on microbial mats. Are these the same as the stromatolites at Shark Bay?"
+          },
+          {
+            "quote": "We are not talking about intact blood cells or preserved haemoglobin, but rather chemical remnants",
+            "tag": "remember",
+            "note": "This sentence is the actual claim. Headlines say blood cells; the scientist says remnants."
+          },
+          {
+            "quote": "the conventional wisdom that organic material disappeared after a million years or less was now being routinely challenged",
+            "tag": "question",
+            "note": "When did this shift start? Was it Schweitzer's T. rex work?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://www.bbc.com/news/articles/c5pvgxkkv4dzo",
+    "readers": [
+      {
+        "handle": "early sparrow",
+        "highlights": [
+          {
+            "quote": "100 billion times smaller than an atom",
+            "tag": "question",
+            "note": "I can't picture this at all. Is there any comparison that helps?"
+          },
+          {
+            "quote": "exists for just one and a half trillionths of a second",
+            "tag": "remember",
+            "note": "Detecting something that lives that briefly is amazing to me."
+          },
+          {
+            "quote": "Some theories suggest that at these scales particles are more sensitive to dark matter",
+            "tag": "followup",
+            "note": "Which theories? The article doesn't say."
+          },
+          {
+            "quote": "I love being here in the UK, but I am looking at jobs abroad",
+            "tag": "observation",
+            "note": "The human side, tucked into the middle of a physics story."
+          }
+        ],
+        "reflections": [
+          {
+            "prompt": "What surprised you most in this piece?",
+            "answer": "The funding story ended up more interesting to me than the physics."
+          }
+        ]
+      },
+      {
+        "handle": "mossy cedar",
+        "highlights": [
+          {
+            "quote": "A world so small that some physicists have nicknamed it the zeptoverse.",
+            "tag": "disagree",
+            "note": "Feels like a coined word to make the result sound bigger. Would physicists really say this?"
+          },
+          {
+            "quote": "Some theories suggest that at these scales particles are more sensitive to dark matter",
+            "tag": "disagree",
+            "note": "\"Some theories\" is carrying the whole headline."
+          },
+          {
+            "quote": "the UK won't get the benefits from training young people who really are our greatest product",
+            "tag": "remember",
+            "note": "People as the real product of research, not papers. Good way to put it."
+          },
+          {
+            "quote": "there were more exciting applications for funding than we were able to support",
+            "tag": "observation",
+            "note": "The standard answer, but probably also true."
+          }
+        ],
+        "leftQuestions": [
+          "Is there a good explainer on what a beauty quark actually is?"
+        ]
+      },
+      {
+        "handle": "rainy kite",
+        "highlights": [
+          {
+            "quote": "smashes atoms together to break them apart and discover what is inside them",
+            "tag": "observation",
+            "note": "A clear explanation for someone like me who skipped physics."
+          },
+          {
+            "quote": "Scientists know it is there because its gravitational force influences normal matter",
+            "tag": "question",
+            "note": "If dark matter only shows up through gravity, why would a quark breaking down tell us anything about it?"
+          },
+          {
+            "quote": "I love being here in the UK, but I am looking at jobs abroad",
+            "tag": "followup",
+            "note": "How many researchers have already left? Is there data on this?"
+          },
+          {
+            "quote": "The cuts are being made despite an overall record increase in the science budget.",
+            "tag": "question",
+            "note": "Where did the record money go, then?"
+          }
+        ]
+      }
+    ]
+  }
+]

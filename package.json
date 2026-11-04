@@ -1,0 +1,15 @@
+{
+  "name": "ground-notes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "seed": "node tools/seed.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.4.0",
+    "@mozilla/readability": "0.6.0",
+    "@netlify/blobs": "11.1.7",
+    "linkedom": "0.18.15"
+  }
+}

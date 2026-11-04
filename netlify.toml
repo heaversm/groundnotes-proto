@@ -1,0 +1,11 @@
+[build]
+  publish = "site"
+
+[functions]
+  directory = "netlify/functions"
+  included_files = ["netlify/lib/**"]
+  node_bundler = "esbuild"
+
+[dev]
+  framework = "#static"
+  port = 8888

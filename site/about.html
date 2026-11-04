@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Ground Notes</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2212%22 cy=%2213%22 r=%229%22 fill=%22%23f3d36b%22/%3E%3Ccircle cx=%2220%22 cy=%2219%22 r=%229%22 fill=%22%238ec1ea%22 fill-opacity=%22.85%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="index.html"><span class="logo-mark"></span>Ground Notes</a>
+  <nav><a href="index.html">Read something</a></nav>
+</header>
+<main class="about">
+  <h1>Reading the news is something we do alone. It doesn't have to be.</h1>
+  <p class="lede">Ground Notes pairs you with another reader of the same article. You each mark what stood out and say why, then see where you met, where you didn't, and ask each other about it. A prototype from Mozilla's Future of the Web team, made for a week on the theme of belonging.</p>
+
+  <section>
+    <h2>Why this exists</h2>
+    <ul>
+      <li><b>Reading online is solitary.</b> Even on sites built around community, you read alone and maybe share a link afterward.</li>
+      <li><b>Comment sections went bad.</b> Many newsrooms closed them. What's left tends to reward the loudest reply, not the most thoughtful reader.</li>
+      <li><b>Feeds are made for one person.</b> When everyone's web is tailored to them, reading the same thing as someone else, and seeing what they took from it, gets rarer.</li>
+      <li><b>Someone else's reasons are the interesting part.</b> Two people can mark the same sentence for opposite reasons. That's a better start to a conversation than a hot take.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ul>
+      <li><b>Paste a link.</b> The article comes back in a clean reader view, with nothing else on the page.</li>
+      <li><b>Highlight and say why.</b> Select a passage, tag it (observation, question, follow up, disagree, remember) and write a note. The note is required.</li>
+      <li><b>Write before you see.</b> Other readers' notes stay hidden until you submit your own, so you read it your own way first.</li>
+      <li><b>Before you look.</b> Two questions drawn from your own notes, like what surprised you, and the chance to leave a question for whoever reads next. All optional.</li>
+      <li><b>Side by side.</b> You're matched with the reader who shares the most ground with you: what you both marked, what sits close together, what's about the same idea in different places, what only one of you noticed, and where they stopped reading.</li>
+      <li><b>Everyone.</b> A heat map of every reader's highlights, the passages many people marked, and the questions readers left.</li>
+      <li><b>Respond.</b> Ask another reader about something they marked, or add something useful, with a link if you like. Replies become short conversations, and you can say an answer helped.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it's made</h2>
+    <table>
+      <tr><th>Piece</th><th>What it does</th><th>Where it runs</th></tr>
+      <tr><td><b>Readability</b> 0.6</td><td>Turns a web page into a clean article. It's the library behind Firefox's Reader View</td><td>On the server, once per article. The result is cached so highlights always line up</td></tr>
+      <tr><td><b>Highlight anchoring</b></td><td>Saves each highlight as the quoted text, a little of the text around it, and its position, as Hypothesis does, so it can be found again</td><td>In your browser</td></tr>
+      <tr><td><b>Layered highlights</b></td><td>Splits overlapping highlights into pieces so any number of readers can be shown at once, and the heat map deepens where more people stopped</td><td>In your browser</td></tr>
+      <tr><td><b>Claude</b> (Anthropic API)</td><td>Asks the reflection questions, suggests things to talk about, links highlights about the same idea, and checks that messages are kind before they're delivered. It never gives its own view of the article</td><td>Anthropic's servers, only when those features are used</td></tr>
+      <tr><td><b>Netlify Functions and Blobs</b></td><td>Stores articles, readings and questions</td><td>Netlify</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>What it borrows, and from whom</h2>
+    <table>
+      <tr><th>Project</th><th>What it learned</th><th>What Ground Notes takes</th></tr>
+      <tr><td><a href="https://ground.news">Ground News</a></td><td>Seeing many outlets' coverage of one event side by side changes how people read it</td><td>The habit of comparing, and the name. Here you compare readers, not outlets</td></tr>
+      <tr><td><a href="https://web.hypothes.is/">Hypothesis</a></td><td>Open annotation on any page. A highlight survives edits if it's saved as the quote plus its surroundings</td><td>The way highlights are anchored</td></tr>
+      <tr><td>Community Notes</td><td>Notes on X are shown only when people who usually disagree both find them helpful</td><td>The common ground view, and matching on what you share</td></tr>
+      <tr><td><a href="https://en.wikipedia.org/wiki/Pol.is">Polis</a></td><td>Anonymous participants, no direct replies, to prevent personal attacks</td><td>No open threads. One question at a time, phrased with curiosity</td></tr>
+      <tr><td><a href="https://coralproject.net/">Coral</a></td><td>Open-source commenting started by Mozilla, the New York Times and the Washington Post. Comments are more civil when a journalist takes part</td><td>Start with a few chosen stories. A note from the writer could come later</td></tr>
+      <tr><td>Civil Comments</td><td>Commenters rated strangers' comments before posting their own, and knowing peers would read them made people moderate themselves</td><td>Write before you see</td></tr>
+      <tr><td><a href="https://getmatter.com">Matter</a></td><td>Reading feels different when the page is quiet</td><td>The look of the reader view</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Healthy by design</h2>
+    <ul>
+      <li><b>No profiles, no politics.</b> Matching uses only which passages you highlighted, never guesses about who you are.</li>
+      <li><b>No public threads, likes or follower counts.</b> Conversations are one question and one answer, between two people.</li>
+      <li><b>Messages are checked before they arrive.</b> Kind ones go out as written. Unkind ones are held back with kinder versions to choose from.</li>
+      <li><b>You can always step away.</b> Hide and report any conversation.</li>
+      <li><b>One reaction only.</b> "This helped." No likes, no scores.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How it could sustain itself</h2>
+    <table>
+      <tr><th>Who pays</th><th>For what</th></tr>
+      <tr><td><b>Teams</b></td><td>Shared understanding after meetings: takeaways marked in the transcript, differences surfaced, open questions answered. The team's data stays the team's</td></tr>
+      <tr><td><b>News publishers</b></td><td>A replacement for comment sections, plus totals: which passages land, what confuses readers, which questions keep coming up</td></tr>
+      <tr><td><b>Schools</b></td><td>Reading together in class</td></tr>
+      <tr><td><b>Researchers</b></td><td>Studies of reading and conversation, with each participant's consent</td></tr>
+    </table>
+    <p><b>The line we won't cross:</b> totals, with consent, are fine. Profiles of how individual people read, sold to advertisers or anyone else, are not. Mozilla has worked on ways to count things across many people without seeing anyone's data, which makes "insight without surveillance" a promise it can keep.</p>
+  </section>
+
+  <section>
+    <h2>What we hope to learn</h2>
+    <ul>
+      <li>Does seeing a stranger's reasons change how people read?</li>
+      <li>Do people ask each other questions, and do they answer?</li>
+      <li>Does a required note make highlights fewer but deeper?</li>
+      <li>Does it feel like company? Do people come back to read a second article?</li>
+    </ul>
+  </section>
+
+  <section class="faq">
+    <h2>Questions</h2>
+    <details><summary>Who are the "sample" readers?</summary><p>Readers written for this demo so the comparison has something in it on day one. They're labelled "sample" everywhere they appear, and they never answer questions. Real readers replace them as people use it.</p></details>
+    <details><summary>Is it anonymous?</summary><p>Yes. There are no accounts. You get a random two-word name for each article, and a private key kept in your browser proves the notes are yours. The server stores only a scrambled copy of that key.</p></details>
+    <details><summary>What does the AI see?</summary><p>Your notes when it asks reflection questions, both readers' notes when it suggests things to talk about, and any message you type to another reader, so it can check it's kind. Nothing is stored by the AI step itself. With no API key it's switched off: ready-made questions take its place, and typed messages are turned off.</p></details>
+    <details><summary>What happens if my message is held back?</summary><p>It isn't sent. You'll see a short reason and a few kinder versions that keep what you meant. Pick one, or edit yours and try again. Disagreeing is fine; attacking the person isn't.</p></details>
+    <details><summary>Why can't I see other notes straight away?</summary><p>So you read the article your own way first. Seeing what others marked before you've decided changes what you notice.</p></details>
+    <details><summary>Why won't some links work?</summary><p>Some sites block tools like this or keep articles behind a login. A later version could use Mozilla's Tabstack to read harder pages.</p></details>
+    <details><summary>Is this a Firefox feature?</summary><p>No. It's a standalone prototype that works in any browser.</p></details>
+  </section>
+
+  <section>
+    <h2>Other forms it could take</h2>
+    <ul>
+      <li><b>Teams, after a meeting.</b> Everyone marks their takeaways in the meeting transcript or notes (from Zoom, Granola and the like). The team sees where its understanding lines up, where it doesn't, and which questions are still open, before anyone acts on a different version of what was decided.</li>
+      <li><b>Classrooms, book clubs and journal clubs.</b> The group sees where it lines up and what's still open before the discussion starts.</li>
+      <li><b>Public consultations.</b> Residents mark a draft policy; officials see common ground and recurring questions.</li>
+      <li><b>Documentation.</b> Readers of developer docs like MDN mark what's confusing and answer each other; writers see where the docs fall short.</li>
+      <li><b>The fine print.</b> Reading terms of service and privacy policies together, with common questions answered once.</li>
+      <li><b>Voice notes.</b> Hold a highlight and say why, transcribed on your own device.</li>
+      <li><b>One event, many outlets.</b> Readers of different outlets' versions of the same story, compared.</li>
+      <li><b>A note from the writer.</b> The journalist answers the questions readers keep asking.</li>
+      <li><b>A shared article of the day.</b> Everyone reads the same piece, so there's always someone to be matched with.</li>
+      <li><b>Your reading over time.</b> Your own mix of questions, observations and things to remember, kept private to you.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

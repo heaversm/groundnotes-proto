@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ground Notes — read the news with a stranger</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2212%22 cy=%2213%22 r=%229%22 fill=%22%23f3d36b%22/%3E%3Ccircle cx=%2220%22 cy=%2219%22 r=%229%22 fill=%22%238ec1ea%22 fill-opacity=%22.85%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="index.html"><span class="logo-mark"></span>Ground Notes</a>
+  <nav><a href="about.html">About</a></nav>
+</header>
+<main class="home">
+  <h1>Read the news with a stranger.</h1>
+  <p class="lede">Mark what stood out and say why. Then see what someone else noticed in the same article, and ask them about it. No names, no comment section.</p>
+
+  <form class="paste" id="paste">
+    <input id="url" type="url" required placeholder="Paste a link to any article" aria-label="Article address">
+    <button class="pill" type="submit">Read it</button>
+  </form>
+  <p class="paste-error" id="paste-error"></p>
+
+  <p class="section-label">Or start with one of these</p>
+  <div class="featured">
+    <a class="story" href="read.html?url=https%3A%2F%2Fmedicalxpress.com%2Fnews%2F2026-10-energy-products-linked-cardiac-heart.html">
+      <span class="kicker">Health · Medical Xpress</span>
+      <h3>Energy drinks and stimulant products linked to cardiac arrest in young adults</h3>
+      <span class="meta">3 sample readers</span>
+    </a>
+    <a class="story" href="read.html?url=https%3A%2F%2Fwww.abc.net.au%2Fnews%2Fscience%2F2026-11-03%2Fsigns-of-mineralised-molecules-from-dinosaurs-red-blood-cell%2F107335770">
+      <span class="kicker">Science · ABC Australia</span>
+      <h3>Mineralised “red blood cells” detected in a 115-million-year-old dinosaur bone</h3>
+      <span class="meta">3 sample readers</span>
+    </a>
+    <a class="story" href="read.html?url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc5pvgxkkv4dzo">
+      <span class="kicker">Physics · BBC News</span>
+      <h3>The zeptoverse: signals from the smallest scale ever explored</h3>
+      <span class="meta">3 sample readers</span>
+    </a>
+  </div>
+
+  <p class="section-label">How it works</p>
+  <div class="steps">
+    <div class="step"><b>Read it your way</b><p>The article comes back clean, with nothing else on the page.</p></div>
+    <div class="step"><b>Mark what stood out</b><p>Highlight a passage, tag it, and say why. The why is required.</p></div>
+    <div class="step"><b>Then see others</b><p>Other readers' notes open only after you submit yours.</p></div>
+    <div class="step"><b>Ask, kindly</b><p>Ask another reader about something they noticed. Questions stay curious, and you both stay anonymous.</p></div>
+  </div>
+</main>
+<script type="module">
+  const form = document.getElementById("paste");
+  const err = document.getElementById("paste-error");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const raw = document.getElementById("url").value.trim();
+    try {
+      const u = new URL(raw);
+      if (!/^https?:$/.test(u.protocol)) throw new Error();
+      location.href = `read.html?url=${encodeURIComponent(u.toString())}`;
+    } catch { err.textContent = "That doesn't look like a web address."; }
+  });
+</script>
+</body>
+</html>
